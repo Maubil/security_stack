@@ -1,0 +1,130 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mabi/OneDrive/Documents/Master/master_arbeit/my_project/ip_repo/SHA512_1.2/src/msim
+vsha512
+Z1 !s110 1546193032
+!i10b 1
+!s100 a6Tg7IK<8F<6kZ4Z]J>Df0
+IhX_5ao]lniCHb^G:PU1b20
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1545129260
+8../rtl/sha512.v
+F../rtl/sha512.v
+Z3 L0 40
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1546193032.000000
+!s107 ../rtl/sha512.v|
+!s90 -reportprogress|300|../rtl/sha512.v|
+!i113 1
+Z6 tCvgOpt 0
+vsha512_core
+!s110 1546193031
+!i10b 1
+!s100 ]Wk@6h0MS:KbM929=B>0F1
+IG=_0_4gIb@5lJahh0eV[V0
+R2
+R0
+Z7 w1544721989
+8../rtl/sha512_core.v
+F../rtl/sha512_core.v
+R3
+R4
+r1
+!s85 0
+31
+!s108 1546193031.000000
+!s107 ../rtl/sha512_core.v|
+!s90 -reportprogress|300|../rtl/sha512_core.v|
+!i113 1
+R6
+vsha512_h_constants
+R1
+!i10b 1
+!s100 CahDLOSHVJh`^?ITolc::3
+IT><>edRMGd>?E;[a]E_CH1
+R2
+R0
+R7
+8../rtl/sha512_h_constants.v
+F../rtl/sha512_h_constants.v
+Z8 L0 39
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../rtl/sha512_h_constants.v|
+!s90 -reportprogress|300|../rtl/sha512_h_constants.v|
+!i113 1
+R6
+vsha512_k_constants
+R1
+!i10b 1
+!s100 AfiLSgGlh;P:cKLeohFg63
+IBCTjDi5L`l5XR4V9i6Nk@3
+R2
+R0
+R7
+8../rtl/sha512_k_constants.v
+F../rtl/sha512_k_constants.v
+R8
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../rtl/sha512_k_constants.v|
+!s90 -reportprogress|300|../rtl/sha512_k_constants.v|
+!i113 1
+R6
+vsha512_w_mem
+R1
+!i10b 1
+!s100 aPEQ3=aCA_G>jnaEDPnGJ3
+IhiQJP:ee<gaKK7oM4@;H>1
+R2
+R0
+R7
+8../rtl/sha512_w_mem.v
+F../rtl/sha512_w_mem.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../rtl/sha512_w_mem.v|
+!s90 -reportprogress|300|../rtl/sha512_w_mem.v|
+!i113 1
+R6
+vtb_sha512_core
+R1
+!i10b 1
+!s100 DKni4HfL^6m2:J?eBV`<61
+I@eO6SOhaX65NdXI]o3Fbj2
+R2
+R0
+w1546189278
+8../tb/tb_sha512_core.v
+F../tb/tb_sha512_core.v
+L0 43
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../tb/tb_sha512_core.v|
+!s90 -reportprogress|300|../tb/tb_sha512_core.v|
+!i113 1
+R6

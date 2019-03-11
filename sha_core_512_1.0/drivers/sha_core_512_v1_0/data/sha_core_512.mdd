@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER sha_core_512
+	OPTION supported_peripherals = (sha_core_512);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = sha_core_512;
+END DRIVER

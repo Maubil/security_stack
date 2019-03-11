@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER trng
+	OPTION supported_peripherals = (trng);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = trng;
+END DRIVER

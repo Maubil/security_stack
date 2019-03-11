@@ -1,0 +1,78 @@
+# do simulation.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:04:35 on Oct 11,2018
+# vlog -reportprogress 300 ../rtl/aes_128.v ../rtl/aes_192.v ../rtl/aes_256.v ../rtl/round.v ../rtl/table.v 
+# -- Compiling module aes_128
+# -- Compiling module expand_key_128
+# -- Compiling module aes_192
+# -- Compiling module expand_key_type_A_192
+# -- Compiling module expand_key_type_B_192
+# -- Compiling module expand_key_type_C_192
+# -- Compiling module expand_key_type_D_192
+# -- Compiling module aes_256
+# -- Compiling module expand_key_type_A_256
+# -- Compiling module expand_key_type_B_256
+# -- Compiling module one_round
+# -- Compiling module final_round
+# -- Compiling module table_lookup
+# -- Compiling module S4
+# -- Compiling module T
+# -- Compiling module S
+# -- Compiling module xS
+# 
+# Top level modules:
+# 	aes_128
+# 	aes_192
+# 	aes_256
+# End time: 15:04:35 on Oct 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:04:35 on Oct 11,2018
+# vlog -reportprogress 300 test_aes_128.v test_aes_192.v test_aes_256.v test_endian.v test_table_lookup.v 
+# -- Compiling module test_aes_128
+# -- Compiling module test_aes_192
+# -- Compiling module test_aes_256
+# -- Compiling module test_endian
+# -- Compiling module test_table_lookup
+# 
+# Top level modules:
+# 	test_aes_128
+# 	test_aes_192
+# 	test_aes_256
+# 	test_endian
+# 	test_table_lookup
+# End time: 15:04:35 on Oct 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt test_aes_128 
+# Start time: 15:04:35 on Oct 11,2018
+# Loading work.test_aes_128
+# Loading work.aes_128
+# Loading work.expand_key_128
+# Loading work.S4
+# Loading work.S
+# Loading work.one_round
+# Loading work.table_lookup
+# Loading work.T
+# Loading work.xS
+# Loading work.final_round
+# Good.
+# ** Note: $finish    : test_aes_128.v(80)
+#    Time: 352 ns  Iteration: 0  Instance: /test_aes_128
+# 1
+# Break in Module test_aes_128 at test_aes_128.v line 80
+# couldn't load file "/home/maurice/intelFPGA_pro/18.0/modelsim_ase/linuxaloem/ScintillaTk/libScintillaTk1.12.so": libstdc++.so.6: cannot open shared object file: No such file or directory
+# ** Error: list element in quotes followed by ":" instead of space
+# Error in macro ./simulation.do line 11
+# list element in quotes followed by ":" instead of space
+#     while executing
+# "foreach val $retval { 
+# 						set wobj [$vsimPriv(windowmgr) FindWindowObj $val]
+# 						if { $wobj ne "" && [lsearch $windowobj_list $wobj] < 0 } {
+# 				..."
+#     (procedure "view" line 144)
+#     invoked from within
+# "view source"
+#     (procedure "run" line 107)
+#     invoked from within
+# "run -all"

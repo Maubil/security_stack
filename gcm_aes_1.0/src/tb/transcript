@@ -1,0 +1,86 @@
+# do simulation.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:07:11 on Oct 11,2018
+# vlog -reportprogress 300 ../rtl/aes_cipher_top.v ../rtl/aes_key_expand_128.v ../rtl/aes_rcon.v ../rtl/aes_sbox.v ../rtl/gcm_aes_v0.v ../rtl/gfm128_16.v 
+# -- Compiling module aes_cipher_top
+# -- Compiling module aes_key_expand_128
+# -- Compiling module aes_rcon
+# -- Compiling module aes_sbox
+# -- Compiling module gcm_aes_v0
+# -- Compiling module gfm128_16
+# 
+# Top level modules:
+# 	gcm_aes_v0
+# End time: 15:07:12 on Oct 11,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:07:12 on Oct 11,2018
+# vlog -reportprogress 300 test_bench.v 
+# -- Compiling module test_bench
+# 
+# Top level modules:
+# 	test_bench
+# End time: 15:07:12 on Oct 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt test_bench 
+# Start time: 15:07:12 on Oct 11,2018
+# Loading work.test_bench
+# Loading work.gcm_aes_v0
+# Loading work.gfm128_16
+# Loading work.aes_cipher_top
+# Loading work.aes_key_expand_128
+# Loading work.aes_sbox
+# Loading work.aes_rcon
+#                    0:DNR = 1, Out_data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, Out_vld = x, Tag_vld = x, Out_data_size= x, Out_last_word=x
+# 
+#                    8:DNR = 1, Out_data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, Out_vld = 0, Tag_vld = 0, Out_data_size= x, Out_last_word=x
+# 
+#                  512:DNR = 0, Out_data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, Out_vld = 0, Tag_vld = 0, Out_data_size= x, Out_last_word=x
+# 
+#                  526:DNR = 1, Out_data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, Out_vld = 0, Tag_vld = 0, Out_data_size= x, Out_last_word=x
+# 
+#                  638:DNR = 0, Out_data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, Out_vld = 0, Tag_vld = 0, Out_data_size= x, Out_last_word=x
+# 
+#                  652:DNR = 1, Out_data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, Out_vld = 0, Tag_vld = 0, Out_data_size= x, Out_last_word=x
+# 
+#                  764:DNR = 0, Out_data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, Out_vld = 0, Tag_vld = 0, Out_data_size= x, Out_last_word=x
+# 
+#                  778:DNR = 1, Out_data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, Out_vld = 0, Tag_vld = 0, Out_data_size= x, Out_last_word=x
+# 
+#                  960:DNR = 1, Out_data = 42831ec2217774244b7221b784d0d49c, Out_vld = 1, Tag_vld = 0, Out_data_size=15, Out_last_word=0
+# 
+#                  974:DNR = 1, Out_data = 42831ec2217774244b7221b784d0d49c, Out_vld = 0, Tag_vld = 0, Out_data_size=15, Out_last_word=0
+# 
+#                 1072:DNR = 0, Out_data = 42831ec2217774244b7221b784d0d49c, Out_vld = 0, Tag_vld = 0, Out_data_size=15, Out_last_word=0
+# 
+#                 1086:DNR = 1, Out_data = 42831ec2217774244b7221b784d0d49c, Out_vld = 0, Tag_vld = 0, Out_data_size=15, Out_last_word=0
+# 
+#                 1268:DNR = 1, Out_data = e3aa212f2c02a4e035c17e2329aca12e, Out_vld = 1, Tag_vld = 0, Out_data_size=15, Out_last_word=0
+# 
+#                 1282:DNR = 1, Out_data = e3aa212f2c02a4e035c17e2329aca12e, Out_vld = 0, Tag_vld = 0, Out_data_size=15, Out_last_word=0
+# 
+#                 1380:DNR = 0, Out_data = e3aa212f2c02a4e035c17e2329aca12e, Out_vld = 0, Tag_vld = 0, Out_data_size=15, Out_last_word=0
+# 
+#                 1394:DNR = 1, Out_data = e3aa212f2c02a4e035c17e2329aca12e, Out_vld = 0, Tag_vld = 0, Out_data_size=15, Out_last_word=0
+# 
+#                 1576:DNR = 1, Out_data = 21d514b25466931c7d8f6a5aac84aa05, Out_vld = 1, Tag_vld = 0, Out_data_size=15, Out_last_word=0
+# 
+#                 1590:DNR = 1, Out_data = 21d514b25466931c7d8f6a5aac84aa05, Out_vld = 0, Tag_vld = 0, Out_data_size=15, Out_last_word=0
+# 
+#                 1688:DNR = 0, Out_data = 21d514b25466931c7d8f6a5aac84aa05, Out_vld = 0, Tag_vld = 0, Out_data_size=15, Out_last_word=0
+# 
+#                 1702:DNR = 1, Out_data = 21d514b25466931c7d8f6a5aac84aa05, Out_vld = 0, Tag_vld = 0, Out_data_size=15, Out_last_word=0
+# 
+#                 1884:DNR = 1, Out_data = 1ba30b396a0aac973d58e0915d908bd0, Out_vld = 1, Tag_vld = 0, Out_data_size=11, Out_last_word=1
+# 
+#                 1898:DNR = 1, Out_data = 1ba30b396a0aac973d58e0915d908bd0, Out_vld = 0, Tag_vld = 0, Out_data_size=11, Out_last_word=1
+# 
+#                 2122:DNR = 1, Out_data = 5bc94fbc3221a5db94fae95ae7121a47, Out_vld = 0, Tag_vld = 1, Out_data_size=11, Out_last_word=1
+# 
+#                 2136:DNR = 1, Out_data = 5bc94fbc3221a5db94fae95ae7121a47, Out_vld = 0, Tag_vld = 0, Out_data_size=11, Out_last_word=1
+# 
+# 0 ps
+# 3150 ns
+# End time: 15:07:38 on Oct 11,2018, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 0

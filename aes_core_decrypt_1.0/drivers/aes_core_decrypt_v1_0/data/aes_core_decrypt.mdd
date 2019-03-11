@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER aes_core_decrypt
+	OPTION supported_peripherals = (aes_core_decrypt);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = aes_core_decrypt;
+END DRIVER
