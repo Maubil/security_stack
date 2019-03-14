@@ -17,7 +17,6 @@
 #include "xil_io.h"
 
 #include "CRO_puf.h"
-#include "securePUF.h"
 #include "aes.h"
 #include "SHA512.h"
 
@@ -47,6 +46,7 @@ static XGpio input, output;
 /*--------------------------------------------------------------------------*/
 static int get_button_data_BLOCKING(void);
 static void print_help(void);
+static u32 RNG_low_level(time_t time_in_ms);
 static void DEMO_SHA512_only(void);
 static void DEMO_CRO_puf_only(void);
 static void DEMO_AES_only(void);
@@ -256,12 +256,44 @@ static void DEMO_AES_only(void)
 	print_help();
 }
 
+static u32 RNG_low_level(time_t time_in_ms)
+{
+	CRO_puf_t cro = {
+			.core_addr = XPAR_CRO_PUF_0_S00_AXI_BASEADDR,
+			.challenge = {0xBADC0FFE, 0xBADC0FFE, 0xBADC0FFE, 0xBADC0FFE},
+			.control = {0x99999999, 0x99999999, 0x99999999},
+			.ready = FALSE,
+			.started = FALSE
+	};
+
+	CRO_raw_resp_t resp = {};
+
+	CRO_write_inputs(&cro);
+	CRO_start(&cro);
+	usleep(time_in_ms * 1000);
+	CRO_stop(&cro, &resp);
+
+	return resp.bot_out^resp.top_out;
+}
+
 static void DEMO_RNG_only(void)
 {
+	size_t counter = 0;
 	xil_printf("\n\r======================== RNG ============================\n\r");
-	xil_printf("Not implemented yet!\n\r");
+	xil_printf("Press any button to return to main menu\n\r");
 
-	xil_printf("Returning to main menu!\n\r\n\r");
+	while (XGpio_DiscreteRead(&input, 1) == 0)
+	{
+		xil_printf("0x%08x\t", RNG_low_level(20));
+		if (++counter >= 10)
+		{
+			counter = 0;
+			xil_printf("\n\r");
+		}
+	}
+	while(XGpio_DiscreteRead(&input, 1) != 0); // wait on button release
+
+	xil_printf("\n\r\n\rReturning to main menu!\n\r\n\r");
 	print_help();
 }
 
