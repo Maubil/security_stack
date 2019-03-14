@@ -7,7 +7,6 @@
 #include "xil_types.h"
 #include "xstatus.h"
 
-
 /**************************** Type Definitions *****************************/
 /**
  *
@@ -29,6 +28,18 @@
 #define AES_mReadMemory(Address) \
     Xil_In32(Address)
 
+typedef enum {
+	AES_128_BIT_KEY = 0,
+	AES_256_BIT_KEY,
+    AES_KEY_ERROR
+} key_length_t;
+
+typedef enum {
+	AES_DECIPHER = 0,
+	AES_ENCIPHER,
+    AES_CIPHER_ERROR
+} cipher_mode_t;
+
 /************************** Function Prototypes ****************************/
 /**
  *
@@ -49,6 +60,10 @@
  * @note    Self test may fail if data memory and device are not on the same bus.
  *
  */
-XStatus AES_Mem_SelfTest(void * baseaddr_p);
+XStatus AES_SelfTest(void * baseaddr_p);
+
+void aes_set_addr(u32 addr);
+XStatus aes_init_key(const u32 *key, const key_length_t key_length);
+XStatus aes(const u32 input_data[4], u32 result[4], key_length_t key_length, cipher_mode_t encdec);
 
 #endif // AES_H
