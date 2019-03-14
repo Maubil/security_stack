@@ -49,6 +49,10 @@
  * @note    Self test may fail if data memory and device are not on the same bus.
  *
  */
-XStatus AES_CORE_ENCRYPT_Mem_SelfTest(void * baseaddr_p);
+XStatus AES_CORE_ENCRYPT_SelfTest(void * baseaddr_p);
+
+void aes_core_encrypt_set_addr(u32 base_addr);
+XStatus aes_core_encrypt_init_key(const u32 key[4]);
+XStatus aes_core_encrypt(const u32 plaintext[4], u32 ciphertext[4]);
 
 #endif // AES_CORE_ENCRYPT_H
